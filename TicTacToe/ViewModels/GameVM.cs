@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using TicTacToe.Models;
+using TicTacToe.Utils;
 
 namespace TicTacToe.ViewModels
 {
@@ -15,13 +16,13 @@ namespace TicTacToe.ViewModels
 
         public GameVM()
         {
-            Game = new Game();
-
+            Game = new Game(BoardGenerator.NewGame());
+            GameBoard = CellBoardToCellVMBoard(Game.GameBoard);
         }
 
         private List<List<CellVM>> CellBoardToCellVMBoard(List<List<Cell>> gameBoard)
         {
-            return gameBoard.Select(row => row.Select(cell => new CellVM()).ToList()).ToList();
+            return gameBoard.Select(row => row.Select(cell => new CellVM(cell)).ToList()).ToList();
         }
     }
 }

@@ -65,6 +65,8 @@
     </Compile>
     <Compile Include="Models\Cell.cs" />
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Utils\BoardGenerator.cs" />
+    <Compile Include="ViewModels\BaseNotification.cs" />
     <Compile Include="ViewModels\CellVM.cs" />
     <Compile Include="ViewModels\GameVM.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
@@ -100,7 +102,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
-    <Folder Include="Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
