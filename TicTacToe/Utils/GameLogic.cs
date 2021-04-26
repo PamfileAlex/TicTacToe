@@ -4,13 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using TicTacToe.Models;
+
 namespace TicTacToe.Utils
 {
     class GameLogic
     {
-        public static GameLogic Instance { get; } = new GameLogic();
+        private Game game;
 
-        static GameLogic() { }
-        private GameLogic() { }
+        public GameLogic(Game game)
+        {
+            this.game = game;
+        }
+
+        public void Pressed(Cell cell)
+        {
+            cell.CellType = game.Turn;
+            game.NextTurn();
+        }
     }
 }

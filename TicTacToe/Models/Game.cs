@@ -35,5 +35,10 @@ namespace TicTacToe.Models
             this.GameBoard = gameBoard;
             this.Turn = Cell.Type.X;
         }
+
+        public void NextTurn()
+        {
+            Turn = Turn == Cell.Type.X ? Cell.Type.O : Cell.Type.X;
+        }
     }
 }

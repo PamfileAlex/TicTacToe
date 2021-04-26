@@ -15,12 +15,12 @@ namespace TicTacToe.Utils
         public static List<List<Cell>> NewGame()
         {
             List<List<Cell>> board = new List<List<Cell>>(SIZE);
-            for(byte row = 0; row < SIZE; ++row)
+            for (byte row = 0; row < SIZE; ++row)
             {
                 List<Cell> line = new List<Cell>(SIZE);
                 for (byte column = 0; column < SIZE; ++column)
                 {
-                    line.Add(new Cell());
+                    line.Add(new Cell(row, column));
                 }
                 board.Add(line);
             }

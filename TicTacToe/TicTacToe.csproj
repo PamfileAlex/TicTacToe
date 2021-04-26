@@ -63,9 +63,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Models\Cell.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Utils\BoardGenerator.cs" />
+    <Compile Include="Utils\GameLogic.cs" />
     <Compile Include="ViewModels\BaseNotification.cs" />
     <Compile Include="ViewModels\CellVM.cs" />
     <Compile Include="ViewModels\GameVM.cs" />
@@ -100,8 +102,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Commands\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
