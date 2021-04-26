@@ -25,6 +25,8 @@
             <Button Content="Save" Style="{DynamicResource MenuButton}"/>
             <Button Content="Load" Style="{DynamicResource MenuButton}"/>
             <Button Content="Exit" Style="{DynamicResource MenuButton}" Command="{Binding ExitCommand}"/>
+            <TextBlock HorizontalAlignment="Center" Text="{Binding GameInfo.X_Wins, StringFormat=X wins: {0}}" FontSize="28" Foreground="LightGray"/>
+            <TextBlock HorizontalAlignment="Center" Text="{Binding GameInfo.O_Wins, StringFormat=O wins: {0}}" FontSize="28" Foreground="LightGray"/>
         </StackPanel>
         <Grid Grid.Column="1" Margin="20" Background="#666262">
             <Border BorderThickness="5" BorderBrush="#4a4a4a" VerticalAlignment="Center" HorizontalAlignment="Center">

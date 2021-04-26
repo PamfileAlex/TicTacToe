@@ -15,6 +15,7 @@ namespace TicTacToe.ViewModels
     {
         private GameLogic gameLogic;
         public Game Game { get; }
+        public GameInfo GameInfo { get { return GameInfo.Instance; } }
         public List<List<CellVM>> GameBoard { get; }
         public ICommand NewGameCommand { get; }
         public ICommand ExitCommand { get; }

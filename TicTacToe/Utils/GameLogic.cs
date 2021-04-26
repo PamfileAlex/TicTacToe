@@ -40,6 +40,7 @@ namespace TicTacToe.Utils
                 || CheckVertical(cell) || CheckDiagonal(cell))
             {
                 MessageBox.Show(game.Turn == Cell.Type.X ? "Player X won" : "Player O won");
+                GameInfo.Instance.AddWin(game.Turn);
                 return true;
             }
             return false;

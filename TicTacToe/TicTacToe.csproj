@@ -67,6 +67,7 @@
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Models\Cell.cs" />
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\GameInfo.cs" />
     <Compile Include="Utils\BoardGenerator.cs" />
     <Compile Include="Utils\GameLogic.cs" />
     <Compile Include="Utils\WindowManager.cs" />
