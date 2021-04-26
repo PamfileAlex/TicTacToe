@@ -26,5 +26,11 @@ namespace TicTacToe.Utils
             }
             return board;
         }
+
+        public static void Reset(Game game)
+        {
+            game.Turn = Cell.Type.X;
+            game.GameBoard.ForEach(line => line.ForEach(cell => cell.CellType = Cell.Type.None));
+        }
     }
 }
