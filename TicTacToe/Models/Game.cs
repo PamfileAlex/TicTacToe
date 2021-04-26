@@ -10,6 +10,7 @@ namespace TicTacToe.Models
 {
     class Game : BaseNotification
     {
+        public byte Occupied { get; private set; }
         public List<List<Cell>> GameBoard { get; }
         public Cell.Type turn;
         public Cell.Type Turn
@@ -34,11 +35,20 @@ namespace TicTacToe.Models
         {
             this.GameBoard = gameBoard;
             this.Turn = Cell.Type.X;
+            this.Occupied = 0;
         }
 
         public void NextTurn()
         {
+            ++Occupied;
             Turn = Turn == Cell.Type.X ? Cell.Type.O : Cell.Type.X;
+        }
+
+        public void Reset()
+        {
+            Occupied = 0;
+            Turn = Cell.Type.X;
+            GameBoard.ForEach(line => line.ForEach(cell => cell.CellType = Cell.Type.None));
         }
     }
 }

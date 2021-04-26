@@ -25,7 +25,7 @@ namespace TicTacToe.ViewModels
             gameLogic = new GameLogic(Game);
             GameBoard = CellBoardToCellVMBoard(Game.GameBoard);
 
-            NewGameCommand = new RelayCommand<Game>(BoardGenerator.Reset);
+            NewGameCommand = new ActionCommand(Game.Reset);
             ExitCommand = new ActionCommand(WindowManager.Close);
         }
 

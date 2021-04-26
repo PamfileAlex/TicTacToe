@@ -23,9 +23,7 @@ namespace TicTacToe.Utils
             cell.CellType = game.Turn;
             if (CheckForWin(cell))
             {
-                String message = game.Turn == Cell.Type.X ? "Player X won" : "Player O won";
-                MessageBox.Show(message);
-                BoardGenerator.Reset(game);
+                game.Reset();
                 return;
             }
             game.NextTurn();
@@ -33,8 +31,18 @@ namespace TicTacToe.Utils
 
         public bool CheckForWin(Cell cell)
         {
-            return game.GameBoard[cell.Row].All(cellObj => cellObj.CellType == game.Turn)
-                || CheckVertical(cell) || CheckDiagonal(cell);
+            if (game.Occupied == BoardGenerator.SIZE * BoardGenerator.SIZE - 1)
+            {
+                MessageBox.Show("DRAW");
+                return true;
+            }
+            if (game.GameBoard[cell.Row].All(cellObj => cellObj.CellType == game.Turn)
+                || CheckVertical(cell) || CheckDiagonal(cell))
+            {
+                MessageBox.Show(game.Turn == Cell.Type.X ? "Player X won" : "Player O won");
+                return true;
+            }
+            return false;
         }
 
         public bool CheckVertical(Cell cell)
