@@ -7,8 +7,22 @@
         mc:Ignorable="d"
         Title="TicTacToe" Height="800" Width="1200"
         WindowStartupLocation="CenterScreen" WindowState="Normal"
-        ResizeMode="CanMinimize">
+        ResizeMode="CanMinimize" Background="#4a4a4a">
+    
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" HorizontalAlignment="Center" Margin="0,50,0,0">
+            <TextBlock Text="Player" Padding="0,20" HorizontalAlignment="Center" FontSize="50" FontWeight="Bold" Foreground="LightGray"/>
+            <Button Content="New Game" Style="{DynamicResource MenuButton}"/>
+            <Button Content="Save" Style="{DynamicResource MenuButton}"/>
+            <Button Content="Load" Style="{DynamicResource MenuButton}"/>
+            <Button Content="Exit" Style="{DynamicResource MenuButton}"/>
+        </StackPanel>
+        <Grid Grid.Column="3" Margin="20" Background="#666262">
+            
+        </Grid>
     </Grid>
 </Window>
