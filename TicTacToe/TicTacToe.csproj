@@ -63,11 +63,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Commands\ActionCommand.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Models\Cell.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Utils\BoardGenerator.cs" />
     <Compile Include="Utils\GameLogic.cs" />
+    <Compile Include="Utils\WindowManager.cs" />
     <Compile Include="ViewModels\BaseNotification.cs" />
     <Compile Include="ViewModels\CellVM.cs" />
     <Compile Include="ViewModels\GameVM.cs" />

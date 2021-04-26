@@ -21,10 +21,10 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" HorizontalAlignment="Center" Margin="0,50,0,0">
             <TextBlock Text="{Binding Game.Player}" Padding="0,20" HorizontalAlignment="Center" FontSize="50" FontWeight="Bold" Foreground="LightGray"/>
-            <Button Content="New Game" Style="{DynamicResource MenuButton}"/>
+            <Button Content="New Game" Style="{DynamicResource MenuButton}" Command="{Binding NewGameCommand}" CommandParameter="{Binding Game}"/>
             <Button Content="Save" Style="{DynamicResource MenuButton}"/>
             <Button Content="Load" Style="{DynamicResource MenuButton}"/>
-            <Button Content="Exit" Style="{DynamicResource MenuButton}"/>
+            <Button Content="Exit" Style="{DynamicResource MenuButton}" Command="{Binding ExitCommand}"/>
         </StackPanel>
         <Grid Grid.Column="1" Margin="20" Background="#666262">
             <Border BorderThickness="5" BorderBrush="#4a4a4a" VerticalAlignment="Center" HorizontalAlignment="Center">

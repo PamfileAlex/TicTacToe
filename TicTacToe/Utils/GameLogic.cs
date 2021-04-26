@@ -14,7 +14,6 @@ namespace TicTacToe.Utils
 
         public GameLogic(Game game)
         {
-
             this.game = game;
         }
 
